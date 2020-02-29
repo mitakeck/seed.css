@@ -80,6 +80,9 @@ TODO
 
 DEMO: https://mitakeck.github.io/seed.css/
 
+
+参照: https://tailwindcss.com/
+
 #### class 命名規則
 
 ```
