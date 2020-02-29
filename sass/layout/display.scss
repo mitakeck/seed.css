@@ -1,0 +1,55 @@
+@mixin display($prefix, $suffix) {
+  #{$prefix}flex#{$suffix} {
+    display: flex;
+  }
+  #{$prefix}inline-flex#{$suffix} {
+    display: inline-flex;
+  }
+  #{$prefix}inline-flexbox#{$suffix} {
+    display: inline-flexbox;
+  }
+  #{$prefix}block#{$suffix} {
+    display: block;
+  }
+  #{$prefix}none#{$suffix} {
+    display: none;
+  }
+  #{$prefix}inline#{$suffix} {
+    display: inline;
+  }
+  #{$prefix}inline-block#{$suffix} {
+    display: inline-block;
+  }
+
+  #{$prefix}grid#{$suffix} {
+    display: grid;
+  }
+
+  // #{$prefix}table#{$suffix} {
+  //   display: table;
+  // }
+  // #{$prefix}table-caption#{$suffix} {
+  //   display: table-caption;
+  // }
+  // #{$prefix}table-cell#{$suffix} {
+  //   display: table-cell;
+  // }
+  // #{$prefix}table-column#{$suffix} {
+  //   display: table-column;
+  // }
+  // #{$prefix}table-column-group#{$suffix} {
+  //   display: table-column-group;
+  // }
+  // #{$prefix}table-footer-group#{$suffix} {
+  //   display: table-footer-group;
+  // }
+  // #{$prefix}table-header-group#{$suffix} {
+  //   display: table-header-group;
+  // }
+  // #{$prefix}table-row#{$suffix} {
+  //   display: table-row;
+  // }
+  // #{$prefix}table-row-group#{$suffix} {
+  //   display: table-row-group;
+  // }
+}

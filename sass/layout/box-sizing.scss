@@ -1,0 +1,10 @@
+@mixin box-sizing($prefix, $suffix) {
+  #{$prefix}box {
+    &-border#{$suffix} {
+      box-sizing: border-box;
+    }
+    &-content#{$suffix} {
+      box-sizing: content-box;
+    }
+  }
+}

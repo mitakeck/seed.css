@@ -1,0 +1,17 @@
+@mixin position($prefix, $suffix) {
+  #{$prefix}static#{$suffix} {
+    position: static;
+  }
+  #{$prefix}absolute#{$suffix} {
+    position: absolute;
+  }
+  #{$prefix}relative#{$suffix} {
+    position: relative;
+  }
+  #{$prefix}fixed#{$suffix} {
+    position: fixed;
+  }
+  #{$prefix}sticky#{$suffix} {
+    position: sticky;
+  }
+}

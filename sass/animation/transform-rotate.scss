@@ -1,0 +1,13 @@
+@mixin transform-rotate($prefix, $suffix) {
+  #{$prefix}rotate {
+    &-0#{$suffix} {
+      transform: rotate(0);
+    }
+    &-50#{$suffix} {
+      transform: rotate(0.5turn);
+    }
+    &-100#{$suffix} {
+      transform: rotate(1turn);
+    }
+  }
+}

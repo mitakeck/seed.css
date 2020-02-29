@@ -1,0 +1,29 @@
+
+@mixin text_font_size($scale) {
+  font-size: percentage($scale/100);
+
+  @if $scale > 100 {
+    // margin-bottom: $scale/100 + rem;
+    line-height: 1.4;
+  }
+}
+
+@mixin text($prefix, $suffix) {
+  #{$prefix}text {
+    &-xxl#{$suffix} {
+      @include text_font_size(235.2);
+    }
+    &-xl#{$suffix} {
+      @include text_font_size(196);
+    }
+    &-lg#{$suffix} {
+      @include text_font_size(140);
+    }
+    &-sm#{$suffix} {
+      @include text_font_size(90);
+    }
+    &-xs#{$suffix} {
+      @include text_font_size(75);
+    }
+  }
+}

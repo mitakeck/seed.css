@@ -1,0 +1,11 @@
+@import "../color.scss";
+
+@mixin border-color($prefix, $suffix) {
+  #{$prefix}border#{$suffix} {
+    @each $color_key, $color_value in $colors {
+      &-#{$color_key} {
+        border-color: $color_value;
+      }
+    }
+  }
+}

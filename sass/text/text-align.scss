@@ -1,0 +1,16 @@
+@mixin text-align($prefix, $suffix) {
+  #{$prefix}text {
+    &-left#{$suffix} {
+      text-align: left;
+    }
+    &-center#{$suffix} {
+      text-align: center;
+    }
+    &-right#{$suffix} {
+      text-align: right;
+    }
+    &-justify#{$suffix} {
+      text-align: justify;
+    }
+  }
+}

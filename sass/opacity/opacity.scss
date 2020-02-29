@@ -1,0 +1,19 @@
+@mixin opacity($prefix, $suffix) {
+  #{$prefix}opacity {
+    &-100#{$suffix} {
+      opacity: 1;
+    }
+    &-75#{$suffix} {
+      opacity: .75;
+    }
+    &-50#{$suffix} {
+      opacity: .5;
+    }
+    &-25#{$suffix} {
+      opacity: .25;
+    }
+    &-0#{$suffix} {
+      opacity: 0;
+    }
+  }
+}

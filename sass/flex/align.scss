@@ -1,0 +1,10 @@
+@mixin align($prefix, $suffix)  {
+  #{$prefix}items {
+    &-stretch#{$suffix} {
+      align-items: stretch;
+    }
+    &-center#{$suffix} {
+      align-items: center;
+    }
+  }
+}

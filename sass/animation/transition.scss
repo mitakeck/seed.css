@@ -1,0 +1,19 @@
+@mixin transition($prefix, $suffix) {
+  #{$prefix}transition {
+    &-all#{$suffix} {
+      transition-property: all;
+    }
+    &-opacity#{$suffix} {
+      transition-property: opacity;
+    }
+    &-color#{$suffix} {
+      transition-property: background-color, border-color, color, fill, stroke;
+    }
+    &-transform#{$suffix} {
+      transition-property: transform;
+    }
+    &-none#{$suffix} {
+      transition-property: none;
+    }
+  }
+}

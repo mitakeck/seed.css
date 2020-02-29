@@ -1,0 +1,45 @@
+// 基本色
+$blue: #0087A7;
+$green: #93BB3D;
+$pink: #EE5A6C;
+$yellow: #FBD100;
+
+$black: #111111;
+$white: #FFFFFF;
+$gray: #bdbdbd;
+
+// テーマ色
+$primary: $green;
+$secondary: darken($primary, 15%);
+
+// ステータス
+$error: $pink;
+$warning: $yellow;
+$success: $green;
+
+$colors: (
+  'blue': $blue,
+  'green': $green,
+  'pink': $pink,
+  'yellow': $yellow,
+
+  'black': $black,
+  'white': $white,
+  'gray': $gray,
+  'gray-10': hsl(0, 0%, 98%),
+  'gray-20': hsl(0, 0%, 96%),
+  'gray-30': hsl(0, 0%, 93%),
+  'gray-40': hsl(0, 0%, 88%),
+  'gray-50': hsl(0, 0%, 74%),
+  'gray-60': hsl(0, 0%, 62%),
+  'gray-70': hsl(0, 0%, 46%),
+  'gray-80': hsl(0, 0%, 38%),
+  'gray-90': hsl(0, 0%, 26%),
+
+  'primary': $primary,
+  'secondary': $secondary,
+
+  'error': $error,
+  'warning': $warning,
+  'success': $success,
+) !default;

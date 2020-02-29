@@ -1,0 +1,26 @@
+@mixin margin($prefix, $suffix) {
+  // 向き
+  $directions: (
+    'm': ('margin'),
+    'mt': ('margin-top'),
+    'mb': ('margin-bottom'),
+    'ml': ('margin-left'),
+    'mr': ('margin-right'),
+    'mx': ('margin-left', 'margin-right'),
+    'my': ('margin-top', 'margin-bottom'),
+  );
+
+  // 向きでループ
+  @each $direction, $css_keys in $directions {
+    @each $css_key in $css_keys {
+      #{$prefix}#{$direction} {
+        // 各サイズのパターン
+        @each $suff, $value in $sizes {
+          &-#{$suff}#{$suffix} {
+            #{$css_key}: #{$value};
+          }
+        }
+      }          
+    }
+  }
+}

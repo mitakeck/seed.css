@@ -1,0 +1,11 @@
+@import "../color.scss";
+
+@mixin background-color($prefix, $suffix) {
+  #{$prefix}bg {
+    @each $color_key, $color_value in $colors {
+      &-#{$color_key}#{$suffix} {
+        background-color: $color_value;
+      }
+    }
+  }
+}

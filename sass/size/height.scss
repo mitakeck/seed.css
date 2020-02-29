@@ -1,0 +1,16 @@
+@mixin height($prefix, $suffix) {
+  #{$prefix}h {
+    @each $size_key, $size_value in $sizes {
+      &-#{$size-key}#{$suffix} {
+        height: $size_value;
+      }
+    }
+
+    &-full#{$suffix} {
+      height: 100%;
+    }
+    &-screen#{$suffix} {
+      height: 100vh;
+    }
+  }
+}

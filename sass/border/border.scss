@@ -1,0 +1,13 @@
+@mixin border($prefix, $suffix) {
+  #{$prefix}border {
+    &#{$suffix} {
+      border-width: 1px;
+      border-style: solid;  
+    }
+
+    &-0#{$suffix} {
+      border-width: 0;
+      border-style: none;
+    }
+  }
+}

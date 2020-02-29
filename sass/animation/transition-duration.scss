@@ -1,0 +1,25 @@
+@mixin transition-duration($prefix, $suffix) {
+  #{$prefix}duration {
+    &-100#{$suffix} {
+      transition-duration: 100ms;
+    }
+    &-200#{$suffix} {
+      transition-duration: 200ms;
+    }
+    &-300#{$suffix} {
+      transition-duration: 300ms;
+    }
+    &-400#{$suffix} {
+      transition-duration: 400ms;
+    }
+    &-500#{$suffix} {
+      transition-duration: 500ms;
+    }
+    &-1000#{$suffix} {
+      transition-duration: 1000ms;
+    }
+    &-3000#{$suffix} {
+      transition-duration: 3000ms;
+    }
+  }
+}

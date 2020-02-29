@@ -1,0 +1,17 @@
+@mixin border-radius($prefix, $suffix) {
+  #{$prefix}rounded {
+    &#{$suffix}{
+      border-radius: 0.25rem;
+    }
+
+    &-none#{$suffix} {
+      border-radius: 0;
+    }
+    &-lg#{$suffix} {
+      border-radius: 0.5rem;
+    }
+    &-full#{$suffix} {
+      border-radius: 9999px;
+    }
+  }
+}

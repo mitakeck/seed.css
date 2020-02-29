@@ -1,0 +1,32 @@
+
+@mixin padding($prefix, $suffix) {
+  // 向き
+  $directions: (
+    'p': ('padding'),
+    'pt': ('padding-top'),
+    'pb': ('padding-bottom'),
+    'pl': ('padding-left'),
+    'pr': ('padding-right'),
+    'px': ('padding-left', 'padding-right'),
+    'py': ('padding-top', 'padding-bottom'),
+  );
+
+  // 向きでループ
+  @each $direction, $css_keys in $directions {
+    @each $css_key in $css_keys {
+      #{$prefix}#{$direction} {
+        // 0 のパターン
+        &-0#{$suffix} {
+          #{$css_key}: 0px;
+        }
+  
+        // 各サイズのパターン
+        @each $suff, $value in $sizes {
+          &-#{$suff}#{$suffix} {
+            #{$css_key}: #{$value};
+          }
+        }
+      }        
+    }
+  }
+}

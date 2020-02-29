@@ -1,0 +1,51 @@
+@mixin transform-scale($prefix, $suffix) {
+  #{$prefix}scale {
+    &-0#{$suffix} {
+      transform: scale(0, 0);
+    }
+    &-50#{$suffix} {
+      transform: scale(.5, .5);
+    }
+    &-100#{$suffix} {
+      transform: scale(1, 1);
+    }
+    &-110#{$suffix} {
+      transform: scale(1.1, 1.1);
+    }
+    &-150#{$suffix} {
+      transform: scale(1.5, 1.5);
+    }
+
+    &-x-0#{$suffix} {
+      transform: scaleX(0);
+    }
+    &-x-50#{$suffix} {
+      transform: scaleX(.5);
+    }
+    &-x-100#{$suffix} {
+      transform: scaleX(1);
+    }
+    &-x-110#{$suffix} {
+      transform: scaleX(1.1);
+    }
+    &-x-150#{$suffix} {
+      transform: scaleX(1.5);
+    }
+
+    &-y-0#{$suffix} {
+      transform: scaleY(0);
+    }
+    &-y-50#{$suffix} {
+      transform: scaleY(.5);
+    }
+    &-y-100#{$suffix} {
+      transform: scaleY(1);
+    }
+    &-y-110#{$suffix} {
+      transform: scaleY(1.1);
+    }
+    &-y-150#{$suffix} {
+      transform: scaleY(1.5);
+    }
+  }
+}

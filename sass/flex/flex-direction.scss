@@ -1,0 +1,14 @@
+@mixin flex-direction($prefix, $suffix) {
+  #{$prefix}flex-row#{$suffix} {
+    flex-direction: row;
+  }
+  #{$suffix}#{$prefix}flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+  #{$prefix}flex-col#{$suffix} {
+    flex-direction: column;
+  }
+  #{$prefix}flex-col-reverse#{$suffix} {
+    flex-direction: column-reverse;
+  }
+}

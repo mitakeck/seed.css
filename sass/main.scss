@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+// リセット
+@import "./_util/reset.scss";
+
+// config
+@import "./_config/size.scss";
+
+// メディアクエリで処理するスクリーンサイズ定義
+@import "./screen_size.scss";
+
+// base
+@import "./base.scss";
+
+// 色定義
+@import "./color.scss";
+
+// 各エレメント
+@import "./animation/transform-rotate.scss";
+@import "./animation/transform-scale.scss";
+@import "./animation/transition-duration.scss";
+@import "./animation/transition.scss";
+@import "./background/background-color.scss";
+@import "./border/border-color.scss";
+@import "./border/border-radius.scss";
+@import "./border/border.scss";
+@import "./flex/align.scss";
+@import "./flex/flex-direction.scss";
+@import "./flex/flex-wrap.scss";
+@import "./layout/box-sizing.scss";
+@import "./layout/display.scss";
+@import "./layout/position.scss";
+@import "./opacity/opacity.scss";
+@import "./shadow/box-shadow.scss";
+@import "./size/height.scss";
+@import "./size/width.scss";
+@import "./space/margin.scss";
+@import "./space/padding.scss";
+@import "./text/text-align.scss";
+@import "./text/text-color.scss";
+@import "./text/text.scss";
+
+@mixin all($prefix: &, $suffix: '') {
+   // 各エレメント mixin
+   @include align($prefix, $suffix);
+   @include background-color($prefix, $suffix);
+   @include border-color($prefix, $suffix);
+   @include border-radius($prefix, $suffix);
+   @include border($prefix, $suffix);
+   @include box-shadow($prefix, $suffix);
+   @include box-sizing($prefix, $suffix);
+   @include display($prefix, $suffix);
+   @include flex-direction($prefix, $suffix);
+   @include flex-wrap($prefix, $suffix);
+   @include height($prefix, $suffix);
+   @include margin($prefix ,$suffix);
+   @include opacity($prefix, $suffix);
+   @include padding($prefix ,$suffix);
+   @include position($prefix, $suffix);
+   @include text-align($prefix, $suffix);
+   @include text-color($prefix, $suffix);
+   @include text($prefix, $suffix);
+   @include transform-rotate($prefix, $suffix);
+   @include transform-scale($prefix, $suffix);
+   @include transition-duration($prefix, $suffix);
+   @include transition($prefix, $suffix);
+   @include width($prefix, $suffix);
+}
+
+@include all('.');
+@each $action in ('hover', 'active', 'focus', 'blur') {
+   @include all(".#{$action}\\:", ":#{$action}");
+}
+
+// 各スクリーンサイズでループ
+@each $breakpoint, $_ in $breakpoints {
+   @include screen_size($breakpoint) {
+      .#{$breakpoint} {
+         // スクリーンサイズの接頭詞を付与
+         &\: {
+            @at-root {
+               @include all();
+            }
+         }
+      }
+   }
+}
