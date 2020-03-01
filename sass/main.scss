@@ -8,6 +8,7 @@
 
 // メディアクエリで処理するスクリーンサイズ定義
 @import "./screen_size.scss";
+@import "./action.scss";
 
 // base
 @import "./base.scss";
@@ -67,20 +68,20 @@
    @include width($prefix, $suffix);
 }
 
+$separator: '\\:';
+
 @include all('.');
-@each $action in ('hover', 'active', 'focus', 'blur') {
-   @include all(".#{$action}\\:", ":#{$action}");
+@each $action in $actions {
+   @include all(".#{$action}#{$separator}", ":#{$action}");
 }
 
 // 各スクリーンサイズでループ
 @each $breakpoint, $_ in $breakpoints {
    @include screen_size($breakpoint) {
-      .#{$breakpoint} {
-         // スクリーンサイズの接頭詞を付与
-         &\: {
-            @at-root {
-               @include all();
-            }
+      // スクリーンサイズの接頭詞を付与
+      .#{$breakpoint}#{$separator} {
+         @at-root {
+            @include all();
          }
       }
    }
